@@ -1,0 +1,15 @@
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\bin\Debug\SteamApplication.exe.config
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\bin\Debug\SteamApplication.exe
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\bin\Debug\SteamApplication.pdb
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.csprojResolveAssemblyReference.cache
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\MainWindow.g.cs
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\App.g.cs
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication_MarkupCompile.cache
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication_MarkupCompile.lref
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\MainWindow.baml
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.g.resources
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.Properties.Resources.resources
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.csproj.GenerateResource.Cache
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.csproj.CoreCompileInputs.cache
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.exe
+C:\Users\едиген\source\repos\SteamApplication\SteamApplication\obj\Debug\SteamApplication.pdb
