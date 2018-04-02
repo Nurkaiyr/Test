@@ -28,14 +28,43 @@ namespace DataAccessLibrary
             using (SqlConnection connection = CreateConnection())
             {
                 connection.Open();
-                SqlCommand command = connection.CreateCommand();
-                command.CommandText = $@"INSERT INTO [dbo].[developers]
-           ([Name],[WebSite]) VALUES ('{developer.Name}','{developer.WebSite}')";
 
-                command.ExecuteNonQuery();
+                SqlTransaction transaction = connection.BeginTransaction();
+                try
+                {
+                    SqlCommand command = connection.CreateCommand();
+
+                    //SqlParameter nameParameter = new SqlParameter();
+                    SqlParameter nameParameter = command.CreateParameter();
+                    nameParameter.DbType = System.Data.DbType.String;
+                    nameParameter.IsNullable = false;
+                    nameParameter.ParameterName = "@Name";
+                    nameParameter.Value = developer.Name;
+                    command.Parameters.Add(nameParameter);
+
+                    SqlParameter webSiteParameter = command.CreateParameter();
+                    webSiteParameter.DbType = System.Data.DbType.String;
+                    webSiteParameter.IsNullable = true;
+                    webSiteParameter.ParameterName = "@WebSite";
+                    webSiteParameter.Value = developer.WebSite;
+                    command.Parameters.Add(nameParameter);
+
+                    //     command.CommandText = $@"INSERT INTO [dbo].[developers]
+                    //([Name],[WebSite]) VALUES ('{developer.Name}','{developer.WebSite}')";
+
+                    command.CommandText = @"INSERT INTO [dbo].[developers]
+           ([Name],[WebSite]) VALUES (@Name, @WebSite)";
+
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                catch(SqlException ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine(ex.StackTrace);
+                }
             }
         }
-
         public List<Developer> SelectAllDevelopers()
         {
             List<Developer> developers = new List<Developer>();
