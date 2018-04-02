@@ -102,6 +102,21 @@ namespace DataAccessLibrary
             }
         }
 
+<<<<<<< HEAD
+=======
+        public void UpdaetWallet(Wallet wallet)
+        {
+            using (SqlConnection connection = CreateConnection())
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = $@"Update [dbo].[wallets]
+                Set balance = money where id = id            ";
+
+                command.ExecuteNonQuery();
+            }
+        }
+>>>>>>> e129703f5557aa2c5b751429f828811a4a47ab39
 
         public List<Wallet> SelectAllWallet()
         {
