@@ -102,8 +102,6 @@ namespace DataAccessLibrary
             }
         }
 
-<<<<<<< HEAD
-=======
         public void UpdaetWallet(Wallet wallet)
         {
             using (SqlConnection connection = CreateConnection())
@@ -116,7 +114,6 @@ namespace DataAccessLibrary
                 command.ExecuteNonQuery();
             }
         }
->>>>>>> e129703f5557aa2c5b751429f828811a4a47ab39
 
         public List<Wallet> SelectAllWallet()
         {
